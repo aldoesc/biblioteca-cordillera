@@ -1,0 +1,22 @@
+{
+  "name": "biblioteca-cordillera",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Plataforma para indexar y vender la biblioteca física Cordillera",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace=apps/api & npm run dev --workspace=apps/web",
+    "dev:api": "npm run dev --workspace=apps/api",
+    "dev:web": "npm run dev --workspace=apps/web",
+    "db:generate": "npm run generate --workspace=packages/db",
+    "db:migrate:local": "npm run migrate:local --workspace=apps/api",
+    "backup": "node scripts/backup.mjs",
+    "build": "npm run build --workspace=apps/web"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

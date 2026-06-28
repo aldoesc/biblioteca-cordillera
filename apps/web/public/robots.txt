@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# No indexar áreas privadas / de gestión
+Disallow: /admin
+Disallow: /carrito
+Disallow: /login
+Disallow: /pedidos
+
+Sitemap: https://biblioteca-cordillera.pages.dev/sitemap.xml

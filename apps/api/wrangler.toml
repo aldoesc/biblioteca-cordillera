@@ -1,0 +1,30 @@
+name = "biblioteca-api"
+main = "src/index.ts"
+compatibility_date = "2024-12-01"
+compatibility_flags = ["nodejs_compat"]
+
+[vars]
+# El usuario que se registre con este email recibe rol 'admin'.
+ADMIN_EMAIL = "aldescobar@gmail.com"
+# URLs públicas (para back_urls del checkout y el webhook de MercadoPago).
+WEB_URL = "https://biblioteca-cordillera.pages.dev"
+SELF_URL = "https://biblioteca-api.aldescobar.workers.dev"
+# El token de MercadoPago NO va acá: se carga como secret con
+#   npx wrangler secret put MP_ACCESS_TOKEN
+
+# Apunta las migraciones de Drizzle (carpeta del paquete db)
+[[d1_databases]]
+binding = "DB"
+database_name = "biblioteca"
+# El database_id real se completa tras `wrangler d1 create biblioteca`.
+# Para desarrollo local con --local no es necesario.
+database_id = "aad33ae3-2b94-4d24-9747-fbba682094bc"
+migrations_dir = "../../packages/db/migrations"
+
+# Bucket R2 para las fotos de portada / ejemplares que suba el admin.
+[[r2_buckets]]
+binding = "BUCKET"
+bucket_name = "biblioteca-portadas"
+
+[observability]
+enabled = true

@@ -1,0 +1,34 @@
+{
+  "version": "7",
+  "dialect": "sqlite",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "6",
+      "when": 1781825003231,
+      "tag": "0000_lyrical_reptil",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "6",
+      "when": 1781888038097,
+      "tag": "0001_eager_kate_bishop",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1781893599725,
+      "tag": "0002_polite_lethal_legion",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "6",
+      "when": 1781894146857,
+      "tag": "0003_funny_stryfe",
+      "breakpoints": true
+    }
+  ]
+}

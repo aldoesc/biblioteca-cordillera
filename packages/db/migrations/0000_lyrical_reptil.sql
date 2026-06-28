@@ -1,0 +1,20 @@
+CREATE TABLE `books` (
+	`id` integer PRIMARY KEY AUTOINCREMENT NOT NULL,
+	`isbn` text,
+	`titulo` text NOT NULL,
+	`autores` text,
+	`anio` integer,
+	`editorial` text,
+	`idioma` text,
+	`num_paginas` integer,
+	`portada_url` text,
+	`resena` text,
+	`estado` text DEFAULT 'archivado' NOT NULL,
+	`precio` real,
+	`moneda` text DEFAULT 'CLP' NOT NULL,
+	`condicion` text,
+	`ubicacion_fisica` text,
+	`notas` text,
+	`created_at` integer DEFAULT (unixepoch()) NOT NULL,
+	`updated_at` integer DEFAULT (unixepoch()) NOT NULL
+);
